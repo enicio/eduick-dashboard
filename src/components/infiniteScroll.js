@@ -1,52 +1,72 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import InfiniteScroll from "react-infinite-scroll-component";
+
+import { fetchProduts } from '../service/service';
 
 import './infiniteScroll.css';
 
 import Card from './card';
 
-const style = {
-  height: 30,
-  border: "1px solid green",
-  margin: 6,
-  padding: 8
-};
+// const style = {
+//   height: 30,
+//   border: "1px solid green",
+//   margin: 6,
+//   padding: 8
+// };
 
-class Scroll extends React.Component {
-  state = {
-    items: Array.from({ length: 20 })
-  };
+function Scroll()  {
+  const [ state, setState ] = useState([]);
 
-  fetchMoreData = () => {
+  const [ products, setProducts ] = useState('')
+
+  useEffect(() => {
+    async function fetchData() {
+      const store = await fetchProduts('');
+      const { items } = store;
+     setProducts(items)
+    }
+    fetchData();
+    // setState(store);
+  },[])
+
+  function fetchMoreData() {
     // a fake async api call like which sends
     // 20 more records in 1.5 secs
-    setTimeout(() => {
-      this.setState({
-        items: this.state.items.concat(Array.from({ length: 5 }))
-      });
-    }, 1500);
+
+    // async function fetchData() {
+    //   const store = await fetchProduts('');
+    //   const { items } = store;
+    async function fetchData() {
+      const store = await fetchProduts('');
+      const { items } = store;
+      setProducts(() => products.concat(items))
+    }
+    fetchData();
+    //  setStore(() => store.concat(store))
+    // };
+    // setState(() =>state.concat(store));
+
+    // setTimeout(() => {
+    //   setState([...store]);
+    // }, 1500);
   };
 
-  render() {
+  if(!products) return <h4>Loading... </h4>
     return (
       <div>
         <hr />
         <InfiniteScroll
-          dataLength={this.state.items.length}
-          next={this.fetchMoreData}
+          dataLength={products.length}
+          next={fetchMoreData}
           hasMore={true}
           loader={<h4>Loading...</h4>}
         >
-          {this.state.items.map((i, index) => (
-            <Card />
-            // <div style={style} key={index}>
-            //   div - #{index}
-            // </div>
+          {products.map((each) => (
+            <Card key={Math.random()} items={each} />
           ))}
         </InfiniteScroll>
       </div>
     );
-  }
 }
 
 export default Scroll;
