@@ -3,5 +3,11 @@
   /* background-color: blue; */
   grid-template-columns: repeat(auto-fit, minmax(275px, auto));
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.infiniteScroll__loading {
+  margin-left: 35%;
+  color: #7b7983;
 }

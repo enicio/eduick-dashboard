@@ -13,7 +13,13 @@ function DropDown() {
     <div  className="dropdown">
     <button
       onClick={() => toggleDropdown()}
-      className="dropbtn">Dropdown
+      className="dropbtn">
+        <img className={(dropdown)
+          ? "dropdown__arrow__down"
+          : "dropdown__arrow__up"}
+          src="assets/arrow.svg"
+          alt="arrow"
+        />
     </button>
     {
       (dropdown)

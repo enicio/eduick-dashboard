@@ -51,15 +51,14 @@ function Scroll()  {
     // }, 1500);
   };
 
-  if(!products) return <h4>Loading... </h4>
+  if(!products) return <h4 className="infiniteScroll__loading">Loading... </h4>
     return (
       <div>
-        <hr />
         <InfiniteScroll
           dataLength={products.length}
           next={fetchMoreData}
           hasMore={true}
-          loader={<h4>Loading...</h4>}
+          loader={<h4 className="infiniteScroll__loading">Loading...</h4>}
         >
           {products.map((each) => (
             <Card key={Math.random()} items={each} />

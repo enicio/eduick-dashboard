@@ -1,0 +1,53 @@
+.mainCard {
+  width: 272px;
+  height: 212px;
+  background: #FFFFFF;
+  box-shadow: 0px 32px 60px rgba(84, 95, 122, 0.08);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.mainCard h1 {
+  font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 21px;
+line-height: 160%;
+/* or 34px */
+color: #200E64;
+margin-left: 21px;
+margin-top: 32px;
+
+}
+
+.mainCard h1 i {
+  color: yellow;
+  font-size: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+}
+
+.mainCard__paragraph {
+  width: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 160%;
+/* or 22px */
+  color: #343434;
+  margin: auto;
+  text-align: justify;
+  margin-left: 24px;
+  margin-top: 32px;
+}
+
+.mainCard .mainCard__shape-yellow {
+  position: relative;
+  top: -175px;
+  right: -202px;
+  width: 64px;
+  height: 64px;
+}
