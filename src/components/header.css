@@ -6,6 +6,7 @@
   background: #7A57FD;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header .header__logo {
@@ -51,4 +52,7 @@
   display: block;
 }
 
-
+.hearder__left_icons {
+  display: flex;
+  margin-right: 25px;
+}

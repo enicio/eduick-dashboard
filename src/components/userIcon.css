@@ -1,0 +1,10 @@
+.user_logged__notification {
+  position: relative;
+  top: 10px;
+  left: 25px;
+  width: 9.6px;
+  height: 9.6px;
+  background: #FFD74F;
+  border-radius: 6px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}

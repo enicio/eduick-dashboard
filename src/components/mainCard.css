@@ -51,3 +51,25 @@ margin-top: 32px;
   width: 64px;
   height: 64px;
 }
+
+@media ( min-width: 400px){
+  .mainCard{
+    width: 80%;
+  }
+
+  .mainCard h1 {
+    margin-left: 118px;
+  }
+
+  .mainCard__paragraph {
+    margin-left: 118px;
+  }
+
+  .mainCard .mainCard__shape-yellow {
+    position: relative;
+    top: -123px;
+    right: 60px;
+    width: 126px;
+    height: 126px;
+  }
+}
