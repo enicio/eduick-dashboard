@@ -1,0 +1,7 @@
+.infinite-scroll-component {
+  display: grid;
+  /* background-color: blue; */
+  grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+  justify-content: center;
+  gap: 10px;
+}
