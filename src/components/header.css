@@ -84,7 +84,12 @@
     margin-left: 100px;
   }
 
-  .header__my_classes {
+  .header .header___left_icons .header__group_dots {
+    display: unset;
+  }
+
+  .header .header___left_icons .header__my_classes {
+    display: unset;
     margin-left: 30px;
     text-decoration: none;
     font-family: Open Sans;
