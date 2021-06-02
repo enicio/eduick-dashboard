@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './dropdown.css';
 
 function DropDown() {
-  const [ dropdown, setDropdown ] = useState(false)
-  // console.log(window.innerWidth)
+  const [ dropdown, setDropdown ] = useState(false);
 
   useEffect(() => {
     if(window.innerWidth > 400) setDropdown(true);
@@ -22,9 +21,6 @@ function DropDown() {
       if(window.innerWidth > 400) setDropdown(true);
       if(window.innerWidth < 400) setDropdown(false);
     }, 200);
-
-    // setDropdown(false)
-    console.log('rezize')
   }
 
   window.addEventListener('resize', handleResize)
