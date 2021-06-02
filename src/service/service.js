@@ -1,9 +1,8 @@
 const URL = 'https://apideprodutos.vercel.app/api/products';
 
-export const fetchProduts = async () => {
+export async function fetchProduts() {
   const results = await fetch(URL);
   const data = await results.json();
-  console.log("chamou a api")
   return data;
 };
 
