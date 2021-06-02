@@ -56,6 +56,15 @@
   margin-right: 25px;
 }
 
+.header .header___left_icons .header__group_dots {
+  display: none;
+}
+
+.header .header___left_icons .header__my_classes {
+  display: none;
+}
+
+
 @media ( min-width: 400px) {
 
   .dropbtn {
