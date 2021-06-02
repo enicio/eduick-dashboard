@@ -1,14 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './dropdown.css';
 
 function DropDown() {
   const [ dropdown, setDropdown ] = useState(false)
+  // console.log(window.innerWidth)
+
+  useEffect(() => {
+    if(window.innerWidth > 400) setDropdown(true);
+  },[])
 
   function toggleDropdown() {
     setDropdown(!dropdown)
   }
+  let timeoutId = null;
 
+  function handleResize() {
+    clearTimeout(timeoutId);
+
+    timeoutId = setTimeout(() => {
+      if(window.innerWidth > 400) setDropdown(true);
+      if(window.innerWidth < 400) setDropdown(false);
+    }, 200);
+
+    // setDropdown(false)
+    console.log('rezize')
+  }
+
+  window.addEventListener('resize', handleResize)
   return(
     <div  className="dropdown">
     <button

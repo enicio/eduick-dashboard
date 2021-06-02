@@ -11,3 +11,10 @@
   margin-left: 35%;
   color: #7b7983;
 }
+
+@media ( min-width: 400px) {
+  .infinite-scroll-component{
+    width: 85%;
+    margin: 20px auto;
+  }
+}

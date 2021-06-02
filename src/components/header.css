@@ -13,7 +13,6 @@
   margin-left: 25px;
 }
 
-
 .header__dropdown {
   float: left;
   overflow: hidden;
@@ -52,7 +51,42 @@
   display: block;
 }
 
-.hearder__left_icons {
+.hearder__rigth_icons {
   display: flex;
   margin-right: 25px;
+}
+
+@media ( min-width: 400px) {
+
+  .dropbtn {
+    display: none;
+  }
+
+  .hearder__rigth_icons {
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  .header___left_icons {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+  }
+
+  .header__my_classes {
+    margin-left: 30px;
+    text-decoration: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    color: #FFFFFF;
+  }
 }
