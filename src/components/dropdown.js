@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './dropdown.css';
 
 // const Window = require('window');
@@ -44,10 +44,12 @@ function DropDown() {
       </button>
       {
         (dropdown)
-        ?<div className="dropdown-content">
-          <a href="/">Change to teacher mode</a>
-        </div>
-        : <button className="dropdown-content-2" > Change to teacher mode </button>
+        ? <div className="dropdown-content">
+            <a href="/">Change to teacher mode</a>
+          </div>
+        : <button className="header__button-teacher-mode" >
+            <a href="/"> Change to teacher mode  </a>
+          </button>
       }
    </div>
   );
