@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from "react-infinite-scroll-component";
 
-import { fetchProduts } from '../service/service';
+import { fetchClasses } from '../service/service';
 
 import './infiniteScroll.css';
 
@@ -21,9 +21,8 @@ function Scroll()  {
 
   useEffect(() => {
     async function fetchData() {
-      const store = await fetchProduts('');
-      const { items } = store;
-     setProducts(items)
+      const classes = await fetchClasses('');
+     setProducts(classes)
     }
     fetchData();
     // setState(store);
@@ -37,9 +36,8 @@ function Scroll()  {
     //   const store = await fetchProduts('');
     //   const { items } = store;
     async function fetchData() {
-      const store = await fetchProduts('');
-      const { items } = store;
-      setProducts(() => products.concat(items))
+      const classes = await fetchClasses('');
+      setProducts(() => products.concat(classes))
     }
     fetchData();
     //  setStore(() => store.concat(store))
@@ -61,7 +59,7 @@ function Scroll()  {
           loader={<h4 className="infiniteScroll__loading">Loading...</h4>}
         >
           {products.map((each) => (
-            <Card key={Math.random()} items={each} />
+            <Card key={Math.random()} classes={each} />
           ))}
         </InfiniteScroll>
       </div>

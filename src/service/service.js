@@ -1,11 +1,7 @@
-const URL = 'https://apideprodutos.vercel.app/api/products';
+const URL = 'https://apideprodutos.vercel.app/api/classes';
 
-export async function fetchProduts() {
+export async function fetchClasses() {
   const results = await fetch(URL);
   const data = await results.json();
   return data;
 };
-
-export const convertCurrency = price => {
-  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price/100)
-}

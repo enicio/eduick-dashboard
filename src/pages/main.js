@@ -11,12 +11,7 @@ function Main() {
     <div className="main">
       <MainCard />
       <div className="card__container">
-        {/* <Card />
-        <Card />
-        <Card />
-        <Card /> */}
         <Scroll />
-
       </div>
     </div>
   );

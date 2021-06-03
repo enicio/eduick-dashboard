@@ -3,9 +3,8 @@ import ReactStars from "react-rating-stars-component";
 
 import './card.css';
 function Card(props) {
-  // console.log(props.items)
-const { name } = props.items;
-// console.log(name)
+  const { classes: { course, rating, lessons} } = props;
+
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
@@ -16,15 +15,15 @@ const { name } = props.items;
       <div className="card__rating__And__lessons">
         <ReactStars
           count={5}
-          value={3}
+          value={ Number(rating)}
           onChange={ratingChanged}
           size={24}
           activeColor="#ffd700"
           className="card__ranking"
         />
-        <span className="card__quantity__of__lessons"> 10 LESSONS</span>
+        <span className="card__quantity__of__lessons"> {lessons} LESSONS</span>
       </div>
-      <h2 className="card__title">{name} </h2>
+      <h2 className="card__title"> {course} </h2>
     </div>
 
   );

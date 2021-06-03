@@ -1,34 +1,12 @@
 import React, { useState } from 'react';
 import './dropdown.css';
 
-// const Window = require('window');
-// const window = new Window();
-
-
 function DropDown() {
   const [ dropdown, setDropdown ] = useState(false);
-
-  // useEffect(() => {
-  //   if(window.innerWidth > 400) setDropdown(true);
-  //   console.log(window.document.body)
-  // },[])
 
   function toggleDropdown() {
     setDropdown(!dropdown)
   }
-
-  // let timeoutId = null;
-
-  // function handleResize() {
-  //   clearTimeout(timeoutId);
-
-  //   timeoutId = setTimeout(() => {
-  //     if(window.innerWidth > 400) setDropdown(true);
-  //     if(window.innerWidth < 400) setDropdown(false);
-  //   }, 200);
-  // }
-
-  // window.addEventListener('resize', handleResize);
 
   return(
     <div  className="dropdown">
@@ -37,7 +15,7 @@ function DropDown() {
         className="dropbtn">
           <img className={(dropdown)
             ? "dropdown__arrow__down"
-            : "dropdown__arrow__up"}
+            : "dropdown__arrow__up" }
             src="assets/arrow.svg"
             alt="arrow"
           />
