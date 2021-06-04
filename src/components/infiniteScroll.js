@@ -16,6 +16,10 @@ function Scroll()  {
     fetchData();
   },[])
 
+  function scrolling() {
+    console.log('scrolling');
+  }
+
   function fetchMoreData() {
 
     async function fetchData() {
@@ -32,7 +36,7 @@ function Scroll()  {
           dataLength={products.length}
           next={fetchMoreData}
           hasMore={true}
-          loader={<h4 className="infiniteScroll__loading">Loading...</h4>}
+          loader={<div className="infiniteScroll__loading"> <h4 >Loading...</h4> </div>}
         >
           {products.map((each) => (
             <Card key={Math.random()} classes={each} />
