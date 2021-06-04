@@ -1,22 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from "react-infinite-scroll-component";
-
 import { fetchClasses } from '../service/service';
+import Card from './card';
 
 import './infiniteScroll.css';
 
-import Card from './card';
-
-// const style = {
-//   height: 30,
-//   border: "1px solid green",
-//   margin: 6,
-//   padding: 8
-// };
-
 function Scroll()  {
-  const [ state, setState ] = useState([]);
-
   const [ products, setProducts ] = useState('')
 
   useEffect(() => {
@@ -25,28 +14,15 @@ function Scroll()  {
      setProducts(classes)
     }
     fetchData();
-    // setState(store);
   },[])
 
   function fetchMoreData() {
-    // a fake async api call like which sends
-    // 20 more records in 1.5 secs
 
-    // async function fetchData() {
-    //   const store = await fetchProduts('');
-    //   const { items } = store;
     async function fetchData() {
       const classes = await fetchClasses('');
       setProducts(() => products.concat(classes))
     }
     fetchData();
-    //  setStore(() => store.concat(store))
-    // };
-    // setState(() =>state.concat(store));
-
-    // setTimeout(() => {
-    //   setState([...store]);
-    // }, 1500);
   };
 
   if(!products) return <h4 className="infiniteScroll__loading">Loading... </h4>
