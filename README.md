@@ -3,10 +3,10 @@
 
 ![App Screenshot](https://ucarecdn.com/1eee304d-9ed0-4289-b425-997c4b056a3c/dashboard.png)
 
-  ### Eduick
+<h1 align="center" > Eduick </h1>
 
 Projeto do dashboard da plataforma de ensino Eduick.
-Este projeto fio implementado utilizando a [React](https://reactjs.org/) com SSR ( server side rendering).
+Este projeto fio implementado utilizando a React com SSR ( server side rendering ).
 
 ## Demostração
 
@@ -19,7 +19,8 @@ Este projeto fio implementado utilizando a [React](https://reactjs.org/) com SSR
 - [Node](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 
-## Run Locally
+
+## Como executar
 
 Clone o projeto
 
@@ -45,8 +46,7 @@ Inicie o servidor
   npm run ssr
 ```
 
-  
-## API 
+## API
 
 Api com os dados para renderização dos cards.
 
@@ -55,7 +55,3 @@ Api com os dados para renderização dos cards.
 ```http
   GET https://apideprodutos.vercel.app/api/classes
 ```
-
-
-
-  
