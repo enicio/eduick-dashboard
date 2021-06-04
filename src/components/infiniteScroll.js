@@ -16,10 +16,6 @@ function Scroll()  {
     fetchData();
   },[])
 
-  function scrolling() {
-    console.log('scrolling');
-  }
-
   function fetchMoreData() {
 
     async function fetchData() {

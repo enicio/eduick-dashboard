@@ -1,12 +1,19 @@
+<h1 align="center" > Eduick Dashboard</h1>
 
-
+<h2 align="center"> Desktop </h2>
 
 ![App Screenshot](https://ucarecdn.com/1eee304d-9ed0-4289-b425-997c4b056a3c/dashboard.png)
 
-<h1 align="center" > Eduick </h1>
+
+<!-- ![App Screenshot](https://ucarecdn.com/ba0a88b1-7cfc-40e1-b0fd-1bd6a009fb5a/-/preview/300x300/) -->
+
+<h2 align="center"> Mobile </h2>
+<p align="center" >
+<img  src="https://ucarecdn.com/ba0a88b1-7cfc-40e1-b0fd-1bd6a009fb5a/-/preview/300x300/"/>
+</p>
 
 Projeto do dashboard da plataforma de ensino Eduick.
-Este projeto fio implementado utilizando a React com SSR ( server side rendering ).
+Este projeto foi implementado utilizando a React com SSR ( server side rendering ).
 
 ## Demostração
 
