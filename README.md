@@ -47,6 +47,12 @@ Instale as dependencias
   npm install
 ```
 
+Crie um build
+
+```bash
+  npm run build
+```
+
 Inicie o servidor
 
 ```bash
