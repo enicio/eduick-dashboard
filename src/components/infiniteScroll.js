@@ -16,6 +16,8 @@ function Scroll()  {
     fetchData();
   },[])
 
+  //Esta função é apenas para uma simulação do scroll infinito.
+  //Ela obtem os dados da API  a cada chamada e concatena com os dados existentes
   function fetchMoreData() {
 
     async function fetchData() {
